@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio • Your Name</title>
+  <meta name="description" content="Simple HTML-only portfolio with semantic sections, media, internal links, a resume table, and a contact form." />
+</head>
+<body>
+  <!-- Header & Primary Navigation -->
+  <header id="home">
+    <h1>KINGSTON EMEFIELE</h1>
+    <p>Portfolio • Web Projects • Experiments</p>
+
+    <nav>
+      <a href="#home">Home</a> |
+      <a href="#about">About</a> |
+      <a href="#work">Work</a> |
+      <a href="#resume">Resume</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <hr />
+
+    <!-- Simple hero video (placeholder source) -->
+    <section aria-label="Intro Video">
+      <h2>Quick Intro</h2>
+      <video controls width="560" poster="assets/intro-poster.jpg">
+        <source src="assets/intro.mp4" type="video/mp4" />
+        <p>Your browser doesn’t support video. You can <a href="assets/intro.mp4">download the intro</a> instead.</p>
+      </video>
+    </section>
+  </header>
+
+  <main>
+    <!-- About -->
+    <section id="about" aria-labelledby="about-heading">
+      <hr />
+      <h2 id="about-heading">About</h2>
+
+      <figure>
+        <img src="assets/profile.jpg" alt="Portrait of Your Name" width="240" />
+        <figcaption>Hi, I build simple, reliable web things.</figcaption>
+      </figure>
+
+      <article>
+        <h3>Who I Am</h3>
+        <p>
+          I’m a developer focused on clarity and usability. I like clean structure,
+          accessible markup, and shipping small improvements consistently.
+        </p>
+      </article>
+
+      <article>
+        <h3>Skills Snapshot</h3>
+        <ul>
+          <li>HTML5, Semantic Structure, Accessibility</li>
+          <li>JavaScript fundamentals</li>
+          <li>Version Control basics</li>
+        </ul>
+      </article>
+
+      <aside aria-label="Audio intro">
+        <h3>Audio Intro</h3>
+        <audio controls>
+          <source src="assets/intro-audio.mp3" type="audio/mpeg" />
+          <p>Your browser doesn’t support audio. You can <a href="assets/intro-audio.mp3">download the audio</a>.</p>
+        </audio>
+      </aside>
+    </section>
+
+    <!-- Work -->
+    <section id="work" aria-labelledby="work-heading">
+      <hr />
+      <h2 id="work-heading">Work</h2>
+      <p>Selected projects. Each one has a short description and a quick preview link.</p>
+
+      <article>
+        <h3>Project One: Portfolio Template</h3>
+        <p>A minimal, semantic HTML template for quick personal sites.</p>
+        <ul>
+          <li>No CSS, fully readable</li>
+          <li>Accessible landmarks and headings</li>
+          <li>Internal section links and media</li>
+        </ul>
+        <p>
+          <a href="#home">Preview top of page</a> |
+          <a href="projects/project-one.html">Open project page</a>
+        </p>
+      </article>
+
+      <article>
+        <h3>Project Two: Simple Gallery</h3>
+        <p>A basic image gallery using only HTML lists and figure captions.</p>
+        <ul>
+          <li>Figure/figcaption for accurate semantics</li>
+          <li>Keyboard-friendly structure</li>
+        </ul>
+        <p>
+          <a href="projects/project-two.html">Open project page</a>
+        </p>
+      </article>
+
+      <article>
+        <h3>Project Three: Form Patterns</h3>
+        <p>Accessible form patterns with labels, fieldsets, and validation attributes.</p>
+        <ul>
+          <li>Labels tied to inputs</li>
+          <li>Fieldset and legend for grouping</li>
+          <li>Required fields for basic validation</li>
+        </ul>
+        <p>
+          <a href="#contact">Jump to Contact Form below</a>
+        </p>
+      </article>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" aria-labelledby="resume-heading">
+      <hr />
+      <h2 id="resume-heading">Resume</h2>
+      <p>
+        Prefer a PDF? <a href="assets/YourName-Resume.pdf" download>Download my resume</a>.
+      </p>
+
+      <table>
+        <caption>Experience Overview</caption>
+        <thead>
+          <tr>
+            <th scope="col">Role</th>
+            <th scope="col">Organization</th>
+            <th scope="col">Dates</th>
+            <th scope="col">Highlights</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Front-End Intern</td>
+            <td>Acme Studio</td>
+            <td><time datetime="2024-06">Jun 2024</time> to <time datetime="2024-12">Dec 2024</time></td>
+            <td>Built semantic pages, improved accessibility checks</td>
+          </tr>
+          <tr>
+            <td>Student Developer</td>
+            <td>University Projects</td>
+            <td><time datetime="2023-09">Sep 2023</time> to <time datetime="2025-06">Jun 2025</time></td>
+            <td>Prototyped sites, learned testing basics</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Education</h3>
+      <ul>
+        <li>B.Sc. in Progress, Computer-related discipline</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <hr />
+      <h2 id="contact-heading">Contact</h2>
+      <p>Use the form below to reach out. Required fields are marked.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Your Details</legend>
+
+          <label for="name">Name *</label><br />
+          <input id="name" name="name" type="text" required /><br /><br />
+
+          <label for="email">Email *</label><br />
+          <input id="email" name="email" type="email" required /><br /><br />
+
+          <label for="reason">Reason for contact</label><br />
+          <select id="reason" name="reason">
+            <option value="project">Project inquiry</option>
+            <option value="collab">Collaboration</option>
+            <option value="other">Other</option>
+          </select><br /><br />
+        </fieldset>
+
+        <fieldset>
+          <legend>Message</legend>
+
+          <label for="subject">Subject *</label><br />
+          <input id="subject" name="subject" type="text" required /><br /><br />
+
+          <label for="message">Your message *</label><br />
+          <textarea id="message" name="message" rows="6" required></textarea><br /><br />
+
+          <span>Preferred contact method:</span><br />
+          <input id="pref-email" name="contact_pref" type="radio" value="email" checked />
+          <label for="pref-email">Email</label>
+          <input id="pref-call" name="contact_pref" type="radio" value="call" />
+          <label for="pref-call">Phone</label><br /><br />
+
+          <input id="consent" name="consent" type="checkbox" required />
+          <label for="consent">I consent to be contacted regarding my inquiry.</label><br /><br />
+        </fieldset>
+
+        <button type="submit">Send</button>
+        <p><small>Having issues? Email me at <a href="mailto:you@example.com">you@example.com</a>.</small></p>
+      </form>
+
+      <p><a href="#home">Back to top</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <hr />
+    <nav aria-label="Footer">
+      <a href="#about">About</a> •
+      <a href="#work">Work</a> •
+      <a href="#resume">Resume</a> •
+      <a href="#contact">Contact</a>
+    </nav>
+    <p>
+      <small>&copy; <time datetime="2025">2025</time> Your Name. All rights reserved.</small>
+    </p>
+  </footer>
+</body>
+</html>
